@@ -13,16 +13,14 @@ public class Solution {
 
         if (y2 > y1) {
             System.out.println(10000);
+        } else if (y2 < y1 || m2 < m1 || m2 == m1 && d2 <= d1) {
+            System.out.println(0);
+        } else if (m1 == m2) {
+            int days = d2 - d1;
+            System.out.println(15 * days);
         } else {
-            if (d2 <= d1) {
-                System.out.println(0);
-            } else if (m1 == m2 && y1 == y2) {
-                int days = d2 - d1;
-                System.out.println(15 * days);
-            } else if (m1 < m2) {
-                int month = m2 - m1;
-                System.out.println(500 * month);
-            }
+            int month = m2 - m1;
+            System.out.println(500 * month);
         }
     }
 }
